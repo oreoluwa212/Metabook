@@ -7,15 +7,28 @@
    box-sizing: border-box;
 }
 
+:root {
+   --body-color: #efefef;
+   --nav-color: #187df2;
+   --bg-color: #fff;
+}
+
+.dark-theme {
+   --body-color: #0a0a0a;
+   --nav-color: #000;
+   --bg-color: #000;
+}
+
 body {
-   background: #EFEFEF;
+   background: var(--body-color);
+   transition: background .3s;
 }
 
 nav {
    display: flex;
    align-items: center;
    justify-content: space-between;
-   background-color: #1876F2;
+   background-color: var(--nav-color);
    padding: 5px 5%;
    position: sticky;
    top: 0;
@@ -86,7 +99,7 @@ nav {
 
 .search-box {
    display: inline-block;
-   background: #EFEFEF;
+   background: var(--body-color);
    color: #626262;
    width: 350px;
    border-radius: 20px;
@@ -110,7 +123,7 @@ nav {
    position: absolute;
    width: 90%;
    max-width: 350px;
-   background: #fff;
+   background: var(--bg-color);
    box-shadow: 0 0 10px rgba(0,0,0, .4);
    color: #626262;
    border-radius: 4px;
@@ -182,6 +195,7 @@ nav {
    padding: 2px 3px;
    cursor: pointer;
    display: flex;
+   transition: padding-left .5s, background 0.5s;
 }
 
 #dark-btn span {
@@ -192,7 +206,10 @@ nav {
    display: inline-block;
 }
 
-
+#dark-btn.dark-btn-on {
+   padding-left: 23px;
+   background: #0a0a0a;
+}
 
 .container {
    display: flex;
@@ -211,7 +228,7 @@ nav {
 }
 
 .right-sidebar {
-   background: #fff;
+   background: var(--bg-color);
    padding: 20px;
    color: #626262;
    flex-basis: 25%;
@@ -438,7 +455,7 @@ nav {
 
 .write-post-container {
    width: 100%;
-   background: #fff;
+   background: var(--bg-color);
    border-radius: 6px;
    padding: 20px;
    color: #626262;
@@ -502,7 +519,7 @@ nav {
 
 .post-container {
    width: 100%;
-   background: #fff;
+   background: var(--bg-color);
    border-radius: 6px;
    padding: 20px;
    color: #626262;
