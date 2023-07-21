@@ -637,3 +637,56 @@ nav {
    padding: 10px 0 20px;
    font-size: 15px;
 }
+
+
+
+
+/* ------------------------------------------- Media Query ---------------------------------------- */
+@media (max-width: 900px){
+   .right-sidebar {
+      display: none;
+   }
+   .min-logo img {
+      width: 200px;
+   }
+   .left-sidebar {
+      display: none;
+   }
+   nav {
+      flex-wrap: wrap;
+   }
+   .nav-left{
+      width: 40%;
+   }
+   .nav-right{
+      flex-basis: 20%;
+      position: absolute;
+      top: 0;
+      right: 0;
+   }
+   .search-box {
+      display: none;
+   }
+   .logo {
+      width: 110px;
+      margin-right: 20px;
+   }
+  .nav-left ul {
+   display: inline-flex;
+   margin: 0 5px;
+   flex-basis: 40%;
+  }
+   .nav-left ul li i{
+      width: 20px;
+      margin: 0 8px;
+   }
+   .nav-right {
+      width: 60px;
+   }
+   .add-post-links {
+      flex-wrap: wrap;
+   }
+   .main-content {
+      /* flex-basis: 100%; */
+   }
+}
